@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.vikroria</groupId>
-    <artifactId>course-work2</artifactId>
+    <artifactId>course-work-2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>course-work2</name>
+    <name>course-work-2</name>
 
     <packaging>jar</packaging>
 
