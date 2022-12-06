@@ -9,9 +9,8 @@ public class Game {
 
     public Game() {}
 
-    public static void run(){
-        Game game = new Game();
-        game.standartMainMenu();
+    public void run(){
+        this.standartMainMenu();
     }
     public void standartMainMenu() {
         MainMenu mainMenu = new MainMenu();

@@ -6,6 +6,7 @@ import ru.victoria.cw2.services.ConfigurationManager;
 public class Application {
     public static void main(String[] args) {
         ConfigurationManager.getScenarioConfiguration();
-        Game.run();
+        Game game = new Game();
+        game.run();
     }
 }
