@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.*;
 
 public class ConfigurationManager {
-    private final static String propertiesPathName = "resources/application.properties";
+    private final static String propertiesPathName = "src/main/resources/application.properties";
     public static String getProperty(String propertyKey) {
         File propertiesFile = new File(propertiesPathName);
         Properties properties = new Properties();
