@@ -8,9 +8,9 @@ import java.io.*;
 import java.util.*;
 
 public class ConfigurationManager {
-    private final static String propertiesPathName = "src/main/resources/application.properties";
+    private final static String PROP_PATH_NAME = "src/main/resources/application.properties";
     public static String getProperty(String propertyKey) {
-        File propertiesFile = new File(propertiesPathName);
+        File propertiesFile = new File(PROP_PATH_NAME);
         Properties properties = new Properties();
         try {
             FileInputStream fileInputStream = new FileInputStream(propertiesFile);
@@ -23,7 +23,7 @@ public class ConfigurationManager {
     }
     public static List<Paragraph> getScenarioConfiguration() {
         try {
-            File configFile = new File(getProperty("config.url"));
+            File configFile = new File(getProperty("SC_CONFIG_URL"));
             ObjectMapper objectMapper = new YAMLMapper();
             List<Paragraph> paragraphList = Arrays.asList(objectMapper.readValue(configFile, Paragraph[].class));
             return paragraphList;
