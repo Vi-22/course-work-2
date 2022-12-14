@@ -28,11 +28,11 @@ public class Game {
         if (!gameMenu.show()) standartMainMenu();
     }
     public void createNew(){
-        this.currentParagraph = Scenario.startScenario();
+        setCurrentParagraph(Scenario.startScenario());
         gameMenu();
     }
     public void restore(){
-        this.currentParagraph = SaveManager.restoreGame();
+        setCurrentParagraph(SaveManager.restoreGame());
         gameMenu();
     }
     public void exit(){
@@ -41,17 +41,17 @@ public class Game {
         System.exit(200);
     }
     public void save(){
-        SaveManager.saveGame(this.currentParagraph);
+        SaveManager.saveGame(getCurrentParagraph());
         MainMenu mainMenu = new MainMenu();
         mainMenu.setStandartMainMenu(this);
         mainMenu.show();
     }
     public void firstAction() {
-        this.currentParagraph = (Scenario.nextParagraph(this.currentParagraph, 0));
+        setCurrentParagraph(Scenario.nextParagraph(getCurrentParagraph(), 0));
         gameMenu();
     }
     public void secondAction() {
-        this.currentParagraph = (Scenario.nextParagraph(this.currentParagraph,1));
+        setCurrentParagraph(Scenario.nextParagraph(getCurrentParagraph(),1));
         gameMenu();
     }
 
