@@ -9,7 +9,7 @@ public class MainMenu extends Menu {
         super(new TreeMap<>());
     }
 
-    public void setStandartMainMenu(Game game) {
+    public void set(Game game) {
         setHead("Главное меню: ");
         CreateNewCommand createNewGame = new CreateNewCommand(game);
         RestoreCommand restoreGame = new RestoreCommand(game);
@@ -18,7 +18,7 @@ public class MainMenu extends Menu {
         getBottoms().put(2, restoreGame);
         getBottoms().put(3, exitGame);
     }
-    public void setExtendMainMenu(Game game) {
+    public void extend(Game game) {
         setHead("Главное меню: ");
         CreateNewCommand createNewGame = new CreateNewCommand(game);
         RestoreCommand restoreGame = new RestoreCommand(game);

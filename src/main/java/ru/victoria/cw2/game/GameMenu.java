@@ -10,7 +10,7 @@ public class GameMenu extends Menu {
     public GameMenu() {
         super(new TreeMap<>());
     }
-    public void setGameMenu(Game game){
+    public void set(Game game){
         this.setHead(game.getCurrentParagraph().getText());
         FirstActionCommand firstAction = new FirstActionCommand(game);
         SecondActionCommand secondAction = new SecondActionCommand(game);

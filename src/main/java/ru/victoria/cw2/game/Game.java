@@ -14,17 +14,17 @@ public class Game {
     }
     public void standartMainMenu() {
         MainMenu mainMenu = new MainMenu();
-        mainMenu.setStandartMainMenu(this);
+        mainMenu.set(this);
         mainMenu.show();
     }
     public void extendMainMenu() {
         MainMenu mainMenu = new MainMenu();
-        mainMenu.setExtendMainMenu(this);
+        mainMenu.extend(this);
         mainMenu.show();
     }
     public void gameMenu() {
         GameMenu gameMenu = new GameMenu();
-        gameMenu.setGameMenu(this);
+        gameMenu.set(this);
         if (!gameMenu.show()) standartMainMenu();
     }
     public void createNew(){
@@ -43,7 +43,7 @@ public class Game {
     public void save(){
         SaveManager.saveGame(getCurrentParagraph());
         MainMenu mainMenu = new MainMenu();
-        mainMenu.setStandartMainMenu(this);
+        mainMenu.set(this);
         mainMenu.show();
     }
     public void firstAction() {
